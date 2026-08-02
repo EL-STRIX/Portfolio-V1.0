@@ -1,0 +1,1325 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="SUJAY | Professional Frontend Developer"
+    />
+    <meta
+      name="keywords"
+      content="Sujay, Frontend Developer, Portfolio, Web Development, UI/UX, Javascript, React"
+    />
+    <meta name="author" content="Sujay" />
+    <link rel="canonical" href="https://sujay-portfolio-v2s.vercel.app/" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://sujay-portfolio-v2s.vercel.app/"
+    />
+    <meta property="og:title" content="SUJAY | Frontend Brutalist" />
+    <meta property="og:description" content="Professional Frontend Developer" />
+    <meta
+      property="og:image"
+      content="https://sujay-portfolio-v2s.vercel.app/Assets/images/main.png"
+    />
+    <link rel="stylesheet" href="Assets/app.css" />
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TLNG322R");
+    </script>
+    <title>SUJAY | Frontend Developer</title>
+
+    <meta name="theme-color" content="#121212" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap"
+      as="style"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "SUJAY",
+        "url": "https://SUJAY-portfolio-v2s.vercel.app/",
+        "jobTitle": "Full Stack Developer",
+        "image": "https://SUJAY-portfolio-v2s.vercel.app/Assets/images/main.png",
+        "knowsAbout": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "React",
+          "UI/UX Design"
+        ],
+        "sameAs": [
+          "https://github.com/SUJAYkumar-dev74",
+          "https://www.instagram.com/webkaizen",
+          "https://www.linkedin.com/in/SUJAYsingh74"
+        ],
+        "description": "A modern and responsive developer portfolio built using HTML, CSS, and JavaScript. Inspired by a retro terminal aesthetic, it features smooth animations, interactive UI elements, and a clean layout to showcase my skills, projects, and professional profile."
+      }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link type="logo" rel="icon" href="Assets/images/title_icon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "neo-yellow": "#FBFF48",
+              "neo-pink": "#FF70A6",
+              "neo-blue": "#3B82F6",
+              "neo-green": "#33FF57",
+              "neo-purple": "#A855F7",
+              "neo-orange": "#FF9F1C",
+              "neo-red": "#FF2A2A",
+              "neo-white": "#FFFDF5",
+              "neo-black": "#121212",
+            },
+            fontFamily: {
+              display: ['"Space Grotesk"', "sans-serif"],
+              mono: ['"JetBrains Mono"', "monospace"],
+            },
+            boxShadow: {
+              hard: "4px 4px 0px 0px #000",
+              "hard-sm": "2px 2px 0px 0px #000",
+              "hard-lg": "8px 8px 0px 0px #000",
+              "hard-xl": "12px 12px 0px 0px #000",
+            },
+          },
+        },
+      };
+    </script>
+    <noscript>
+      <style>
+        #preloader {
+          display: none !important;
+        }
+        html.is-loading {
+          overflow: auto !important;
+        }
+      </style>
+    </noscript>
+  </head>
+
+  <body
+    class="text-neo-black font-display antialiased selection:bg-neo-black selection:text-neo-yellow"
+  >
+    <div id="preloader" class="preloader" role="status" aria-live="polite">
+      <span class="sr-only">Loading portfolio, please wait&hellip;</span>
+
+      <div class="cyber-core-container">
+        <div class="orbit-ring"></div>
+        <div class="orbit-ring-2"></div>
+        <div class="orbit-ring-3"></div>
+        <div class="pulse-core">DEV</div>
+      </div>
+
+      <div class="preloader-percent" id="preloaderPercent">00%</div>
+
+      <div class="preloader-bar-track">
+        <div class="preloader-bar-fill" id="preloaderBar"></div>
+      </div>
+
+      <div class="cyber-terminal-box">
+        <span>></span> <span id="cyberText">BOOTING CORE ENGINE...</span
+        ><span class="terminal-cursor"></span>
+      </div>
+    </div>
+
+    <div
+      id="cursor"
+      class="w-6 h-6 bg-neo-yellow/70 rounded-full border-2 border-black hidden lg:block"
+    ></div>
+
+    <div
+      class="fixed top-0 left-0 h-2 bg-neo-green z-[60] border-b-2 border-black transition-all duration-75"
+      id="progressBar"
+      style="width: 0%"
+    ></div>
+
+    <nav class="fixed top-0 w-full z-50 px-4 py-4 pointer-events-none">
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center pointer-events-auto hero-reveal-top"
+      >
+        <a
+          href="https://github.com/EL-STRIX"
+          class="bg-neo-white border-2 border-black px-4 py-1 text-2xl font-black shadow-hard hover:bg-neo-yellow transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none cursor-hover"
+        >
+          EL-STRIX
+        </a>
+
+        <div
+          class="hidden md:flex gap-4 bg-white border-2 border-black p-2 shadow-hard"
+        >
+          <a
+            href="#about"
+            class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover"
+            >/ABOUT</a
+          >
+          <a
+            href="#skills"
+            class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover"
+            >/SKILLS</a
+          >
+          <a
+            href="#experience"
+            class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover"
+            >/LOGS</a
+          >
+          <a
+            href="#projects"
+            class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover"
+            >/WORK</a
+          >
+          <a
+            href="#contact"
+            class="px-3 py-1 font-mono font-bold text-sm bg-neo-yellow border border-black hover:bg-neo-pink transition-colors cursor-hover"
+            >HIRE ME</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section
+      class="min-h-screen flex flex-col justify-center items-center px-4 pt-20 relative overflow-hidden border-b-4 border-black"
+    >
+      <div
+        class="absolute top-1/3 left-[10%] w-16 h-16 bg-neo-blue border-4 border-black shadow-hard animate-bounce hidden lg:block rotate-12"
+      ></div>
+      <div
+        class="absolute bottom-1/3 right-[10%] w-24 h-24 bg-neo-pink rounded-full border-4 border-black shadow-hard hidden lg:block animate-pulse"
+      ></div>
+      <div
+        class="absolute top-20 right-20 text-9xl opacity-5 font-black select-none pointer-events-none"
+      >
+        SUJAY
+      </div>
+
+      <div class="relative z-10 text-center max-w-5xl">
+        <div
+          class="inline-block bg-neo-white border-2 border-black px-4 py-1 mb-6 shadow-hard rotate-[-2deg] hero-reveal"
+        >
+          <span class="font-mono font-bold text-neo-green bg-black px-2 mr-2"
+            >●</span
+          >
+          <span class="font-mono font-bold">SYSTEM STATUS: ONLINE</span>
+        </div>
+
+        <h1
+          class="text-[13vw] md:text-[10vw] leading-[0.8] font-black uppercase tracking-tighter mb-6 hero-reveal mix-blend-darken"
+        >
+          FRONTEND<br />
+          <span
+            class="text-white text-stroke-black"
+            style="-webkit-text-stroke: 3px black"
+            >DEVELOPER</span
+          >
+        </h1>
+
+        <p
+          class="font-mono text-lg md:text-2xl max-w-2xl mx-auto mb-10 bg-neo-yellow border-2 border-black p-4 shadow-hard hero-reveal rotate-1"
+        >
+          I build digital products that refuse to be boring. <br />
+          <b>HTML • CSS • JavaScript • React</b>
+        </p>
+
+        <div class="flex flex-col md:flex-row justify-center gap-6 hero-reveal">
+          <a
+            href="#projects"
+            class="bg-black text-white border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-green hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover"
+          >
+            VIEW DATABASE
+          </a>
+          <a
+            href="Assets/Resume/Resume.pdf"
+            download
+            class="bg-neo-white text-black border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-pink hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover flex items-center justify-center gap-2"
+          >
+            <i class="ri-download-line"></i> DOWNLOAD CV
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="border-b-4 border-black bg-neo-blue py-3 relative z-20">
+      <div class="marquee-container font-mono font-bold text-2xl text-white">
+        <div class="marquee-content">
+          /// OPEN FOR WORK /// FRONTEND DEVELOPMENT /// CUSTOM BIRTHDAY
+          WEBSITES /// WEDDING WEBSITES /// &amp; EVERY OCCASSION /// FAST ///
+          SECURE /// OPEN FOR WORK /// FRONTEND DEVELOPMENT ///
+        </div>
+      </div>
+    </div> -->
+
+    <section
+      id="about"
+      class="py-24 px-4 max-w-7xl mx-auto border-x-4 border-black bg-white my-12 shadow-hard-lg"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div class="md:col-span-4 reveal">
+          <div
+            class="aspect-square bg-gray-200 border-4 border-black relative shadow-hard overflow-hidden group"
+          >
+            <img
+              src="Assets/images/main.png"
+              alt="SUJAY"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+            />
+            <span
+              class="absolute top-2 left-2 bg-neo-red text-white px-2 font-mono text-xs border border-black z-10"
+              >SUJAY</span
+            >
+          </div>
+        </div>
+        <div class="md:col-span-8 flex flex-col justify-center reveal">
+          <h2 class="text-6xl font-black uppercase mb-6">Who am I?</h2>
+          <p class="font-mono text-xl leading-relaxed mb-6">
+            I am SUJAY. A creative developer who build beautiful websites that
+            fell alive.<span class="bg-neo-yellow px-1 border border-black"
+              >personality</span
+            >
+            back to code.
+          </p>
+          <p
+            class="font-mono text-lg mb-8 text-gray-600 border-l-4 border-neo-purple pl-4"
+          >
+            > Specialized in Frontend Development.<br />
+            > Passionate about Full Stack Development &amp; DevOps.<br />
+            > Building Fast, Modern Web Experiences.
+          </p>
+
+          <div class="flex gap-4">
+            <div
+              class="bg-neo-black text-white px-4 py-2 font-mono text-sm border-2 border-transparent"
+            >
+              ⾕ LOCATION: WORLDWIDE
+            </div>
+            <div
+              class="bg-neo-green text-black px-4 py-2 font-mono text-sm border-2 border-black"
+            >
+              𓏲ּ𝄢 STATUS: AVAILABLE
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="skills"
+      class="py-20 bg-neo-black text-neo-white border-y-4 border-black relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 opacity-20"
+        style="
+          background-image:
+            linear-gradient(#333 1px, transparent 1px),
+            linear-gradient(90deg, #333 1px, transparent 1px);
+          background-size: 40px 40px;
+        "
+      ></div>
+
+      <div class="max-w-[1400px] mx-auto px-4 relative z-10">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-12 border-b-4 border-white pb-4"
+        >
+          <h2
+            class="text-6xl md:text-8xl font-black uppercase text-white tracking-tighter"
+          >
+            TECH<span class="text-neo-green">_STACK</span>
+          </h2>
+          <div class="flex items-center gap-2 mb-2 md:mb-4">
+            <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+            <p class="font-mono text-neo-green text-sm font-bold">
+              /// SYSTEM_OPTIMIZED
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center md:justify-start">
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ LIBRARY
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              REACT
+            </div>
+          </div>
+
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ FRAMEWORK
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              NEXT.JS
+            </div>
+          </div>
+
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-blue transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ LANGUAGE
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              Python
+            </div>
+          </div>
+
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ BACKEND
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              ???
+            </div>
+          </div>
+
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-pink transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ STYLING
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              TAILWIND
+            </div>
+          </div>
+
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-purple transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ DATA
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              ???
+            </div>
+          </div>
+
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ CORE
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              HTML5
+            </div>
+          </div>
+
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ VERSION
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              GIT
+            </div>
+          </div>
+
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ QUERY
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              ???
+            </div>
+          </div>
+
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-blue transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ OPS
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              GitHub
+            </div>
+          </div>
+
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ LANGUAGE
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              JAVASCRIPT
+            </div>
+          </div>
+
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ FRAMEWORK
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              Django
+            </div>
+          </div>
+
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-pink transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ LANGUAGE
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              ???
+            </div>
+          </div>
+
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ FRAMEWORK
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              ???
+            </div>
+          </div>
+
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ 3D
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              THREE.JS
+            </div>
+          </div>
+
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-purple transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ LANGUAGE
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              ???
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t-4 border-white mt-8 pt-4 flex justify-between font-mono text-xs text-gray-500"
+        >
+          <span>TOTAL_NODES: ***</span>
+          <span>MEMORY_USAGE: ***</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="py-24 px-4 max-w-7xl mx-auto">
+      <h2
+        class="text-5xl md:text-8xl font-black uppercase mb-12 tracking-tighter text-center"
+      >
+        Experience<span class="text-neo-red">_Log</span>
+      </h2>
+
+      <div class="relative border-l-4 border-black ml-4 md:ml-10">
+        <div class="reveal relative pl-8 md:pl-16">
+          <div
+            class="absolute -left-[14px] top-2 w-6 h-6 bg-neo-yellow border-4 border-black"
+          ></div>
+
+          <div
+            class="bg-white border-4 border-black p-6 shadow-hard hover:shadow-hard-xl transition-all"
+          >
+            <div
+              class="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-dashed border-gray-300 pb-4 mb-4"
+            >
+              <h3 class="text-3xl font-black uppercase">
+                Founder &amp; Web Developer
+              </h3>
+
+              <span
+                class="font-mono font-bold bg-neo-black text-white px-2 py-1"
+              >
+                2025 - PRESENT
+              </span>
+            </div>
+
+            <p class="font-mono text-xl mb-4 text-neo-yellow font-bold">
+              @ WEBKAIZEN (webkaizen.in)
+            </p>
+
+            <ul class="list-disc list-inside font-mono text-gray-700 space-y-2">
+              <li>
+                Founded WebKaizen to build modern, fast and responsive websites
+                for individuals and businesses.
+              </li>
+              <li>
+                Specialized in Birthday, Wedding, Anniversary, Invitation and
+                Event websites with custom designs.
+              </li>
+              <li>
+                Developed 500+ websites and landing pages with a strong focus on
+                performance and user experience.
+              </li>
+              <li>
+                Created reusable website templates and premium source code for
+                developers and businesses.
+              </li>
+              <li>
+                Built websites using HTML, CSS, JavaScript, React, Tailwind CSS,
+                Nextjs and modern web technologies.
+              </li>
+              <li>
+                Focused on SEO, responsive design, clean UI and optimized
+                loading speed for every project.
+              </li>
+              <li>
+                Continuously expanding WebKaizen as a digital brand while
+                learning Cybersecurity and AI.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="coding-stats"
+      class="py-16 w-full bg-[#0a0a0a] text-white border-y-4 border-black relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 opacity-20 pointer-events-none"
+        style="
+          background-image:
+            linear-gradient(#333 1px, transparent 1px),
+            linear-gradient(90deg, #333 1px, transparent 1px);
+          background-size: 40px 40px;
+        "
+      ></div>
+
+      <div class="w-full px-4 md:px-12 relative z-10">
+        <div
+          class="flex justify-between items-center mb-10 border-b-2 border-white pb-4"
+        >
+          <h2
+            class="text-4xl md:text-6xl font-black uppercase text-white tracking-tight"
+          >
+            CODING<span class="text-[#33FF57]">_STATS</span>
+          </h2>
+          <div class="flex items-center gap-2">
+            <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+            <p class="font-mono text-[#33FF57] text-sm font-bold">
+              LIVE SYNCED
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 w-full">
+          <div class="flex flex-col w-full">
+            <div
+              class="flex items-center gap-2 mb-6 border-b border-white/20 pb-2"
+            >
+              <div
+                class="w-10 h-10 bg-[#33FF57] border-2 border-white flex items-center justify-center shadow-[4px_4px_0_rgba(255,255,255,1)]"
+              >
+                <i class="ri-github-fill text-xl text-black"></i>
+              </div>
+              <h3 class="text-3xl font-black uppercase text-white">
+                GITHUB PROFILE
+              </h3>
+            </div>
+
+            <div
+              class="border-4 border-white/20 p-6 md:p-10 bg-black flex-1 flex flex-col shadow-[10px_10px_0_rgba(0,0,0,1)] relative group"
+            >
+              <div
+                class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 pb-6 border-b border-white/10 gap-4"
+              >
+                <div class="flex items-center gap-4">
+                  <i class="ri-github-fill text-4xl text-[#33FF57]"></i>
+                  <div>
+                    <h4 class="text-2xl font-black text-white leading-tight">
+                      SUJAYkumar-dev74
+                    </h4>
+                    <p
+                      class="text-xs font-mono text-[#33FF57] uppercase tracking-widest mt-1"
+                    >
+                      Verified Developer
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/SUJAYkumar-dev74"
+                    target="_blank"
+                    class="inline-block bg-[#33FF57] text-black font-mono text-xs font-black uppercase px-4 py-2 border-2 border-white shadow-[4px_4px_0_rgba(255,255,255,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
+                  >
+                    Visit Profile →
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="mb-8 border-2 border-white/20 p-4 bg-[#0a0a0a] shadow-[6px_6px_0_rgba(51,255,87,0.15)] overflow-hidden"
+              >
+                <div
+                  class="w-full text-left text-xs font-mono text-[#33FF57] uppercase mb-4 border-b border-white/10 pb-2 flex justify-between items-center"
+                >
+                  <span>🏆 GitHub Trophies &amp; Achievements</span>
+                  <span class="text-green-400 font-bold">ACTIVE</span>
+                </div>
+                <div class="w-full flex justify-center overflow-x-auto py-2">
+                  <a
+                    href="https://github.com/SUJAYkumar-dev74"
+                    target="_blank"
+                    class="block w-full text-center"
+                  >
+                    <img
+                      data-src="https://github-profile-trophy.vercel.app/?username=SUJAYkumar-dev74&theme=radical&no-bg=true&margin-w=5&margin-h=5&column=3"
+                      data-fallback="trophy-fallback"
+                      alt="GitHub Trophies"
+                      class="lazy-img mx-auto h-auto max-h-[150px] filter brightness-110"
+                      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C/svg%3E"
+                      onerror="
+                        this.style.display = 'none';
+                        document.getElementById(
+                          'trophy-fallback',
+                        ).style.display = 'block';
+                      "
+                    />
+                    <div
+                      id="trophy-fallback"
+                      style="display: none"
+                      class="py-4 text-sm font-mono text-gray-400"
+                    >
+                      Trophies viewable directly on
+                      <span class="text-[#33FF57]">GitHub Profile</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                <div
+                  class="border-2 border-white/20 p-4 bg-[#0a0a0a] flex flex-col items-center justify-center shadow-[6px_6px_0_rgba(51,255,87,0.15)] overflow-hidden"
+                >
+                  <div
+                    class="w-full text-left text-xs font-mono text-[#33FF57] uppercase mb-3 border-b border-white/10 pb-2"
+                  >
+                    // Overall Metrics
+                  </div>
+                  <a
+                    href="https://github.com/SUJAYkumar-dev74"
+                    target="_blank"
+                    class="w-full flex justify-center"
+                  >
+                    <img
+                      data-src="https://github-readme-stats.vercel.app/api?username=SUJAYkumar-dev74&show_icons=true&theme=radical&hide_border=true&bg_color=0a0a0a&count_private=true"
+                      alt="SUJAY's GitHub Stats"
+                      class="lazy-img w-full h-auto object-contain"
+                      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C/svg%3E"
+                      onerror="
+                        this.onerror = null;
+                        this.src =
+                          'https://github-readme-stats.vercel.app/api?username=SUJAYkumar-dev74&show_icons=true&theme=dark&hide_border=true';
+                      "
+                    />
+                  </a>
+                </div>
+
+                <div
+                  class="border-2 border-white/20 p-4 bg-[#0a0a0a] flex flex-col items-center justify-center shadow-[6px_6px_0_rgba(51,255,87,0.15)] overflow-hidden"
+                >
+                  <div
+                    class="w-full text-left text-xs font-mono text-[#33FF57] uppercase mb-3 border-b border-white/10 pb-2"
+                  >
+                    // Streak &amp; Consistency
+                  </div>
+                  <a
+                    href="https://github.com/SUJAYkumar-dev74"
+                    target="_blank"
+                    class="w-full flex justify-center"
+                  >
+                    <img
+                      data-src="https://github-readme-streak-stats.herokuapp.com/?user=SUJAYkumar-dev74&theme=radical&hide_border=true&background=0a0a0a"
+                      data-fallback="streak-fallback"
+                      alt="SUJAY's GitHub Streak"
+                      class="lazy-img w-full h-auto object-contain"
+                      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C/svg%3E"
+                      onerror="
+                        this.style.display = 'none';
+                        document.getElementById(
+                          'streak-fallback',
+                        ).style.display = 'block';
+                      "
+                    />
+                    <div
+                      id="streak-fallback"
+                      style="display: none"
+                      class="py-4 text-sm font-mono text-gray-400 text-center"
+                    >
+                      Streak stats viewable directly on
+                      <span class="text-[#33FF57]">GitHub Profile</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="w-full flex flex-col justify-center mb-8">
+                <div
+                  class="bg-black border-2 border-[#33FF57]/30 p-4 overflow-x-auto shadow-[6px_6px_0_rgba(51,255,87,0.1)] relative"
+                >
+                  <div
+                    class="absolute top-2 right-2 w-2 h-2 bg-[#33FF57] rounded-full animate-pulse"
+                  ></div>
+                  <p
+                    class="text-xs font-mono text-[#33FF57]/60 uppercase tracking-[0.2em] mb-3"
+                  >
+                    Matrix_Output // Contribution Graph
+                  </p>
+                  <div class="w-full flex justify-center py-2">
+                    <img
+                      data-src="https://ghchart.rshah.org/33FF57/SUJAYkumar-dev74"
+                      data-fallback="chart-fallback"
+                      alt="GitHub Contribution Graph"
+                      class="lazy-img w-full h-auto filter brightness-110 min-w-[650px]"
+                      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C/svg%3E"
+                      onerror="
+                        this.style.display = 'none';
+                        document.getElementById(
+                          'chart-fallback',
+                        ).style.display = 'block';
+                      "
+                    />
+                    <div
+                      id="chart-fallback"
+                      style="display: none"
+                      class="py-4 text-sm font-mono text-gray-400 text-center w-full"
+                    >
+                      Contribution graph viewable directly on
+                      <span class="text-[#33FF57]">GitHub Profile</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="mt-auto flex flex-col sm:flex-row items-center justify-between text-[#33FF57] p-4 border-2 border-white/10 bg-[#0a0a0a] font-mono text-sm gap-4"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="text-white/40">$</span>
+                  <span class="text-[#33FF57]"
+                    >git status --remote origin/SUJAYkumar-dev74</span
+                  >
+                  <span class="animate-pulse">_</span>
+                </div>
+                <span class="text-gray-400 text-xs">
+                  Status:
+                  <strong class="text-green-400">100% Operational</strong>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="projects"
+      class="py-24 bg-neo-yellow border-t-4 border-black px-4 overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-6xl md:text-9xl font-black mb-16 uppercase tracking-tighter text-white drop-shadow-[4px_4px_0_rgba(0,0,0,1)] text-stroke-black"
+          style="-webkit-text-stroke: 3px black"
+        >
+          Selected Works
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <article
+            class="reveal group bg-white border-4 border-black p-4 shadow-hard"
+          >
+            <div
+              class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all"
+            >
+              <img
+                src="Assets/images/portfolio-v2.png"
+                alt="portfolio-v2"
+                loading="lazy"
+                decoding="async"
+                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+              />
+            </div>
+            <div class="flex justify-between items-start">
+              <div>
+                <h3
+                  class="text-4xl font-black uppercase mb-2 group-hover:text-neo-red transition-colors glitch-hover"
+                >
+                  Portfolio-v2
+                </h3>
+                <p class="font-mono text-sm mb-4 max-w-xs">
+                  Portfolio V2 – A modern, responsive personal portfolio built
+                  with clean UI, smooth animations, and performance-focused
+                  design.
+                </p>
+                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                  <span class="bg-neo-black text-white px-2 py-1">HTML</span>
+                  <span class="bg-neo-black text-white px-2 py-1">CSS</span>
+                  <span class="bg-neo-black text-white px-2 py-1"
+                    >JAVASCRIPT</span
+                  >
+                  <span class="bg-neo-black text-white px-2 py-1"
+                    >Frontend</span
+                  >
+                </div>
+              </div>
+              <a
+                href="https://github.com/SUJAYkumar-dev74/portfolio-v2.git"
+                aria-label="View Portfolio-v2 repository on GitHub"
+                class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm"
+              >
+                <i class="ri-arrow-right-up-line text-2xl"></i>
+              </a>
+            </div>
+          </article>
+
+          <article
+            class="reveal group bg-white border-4 border-black p-4 shadow-hard mt-0 md:mt-20"
+          >
+            <div
+              class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all"
+            >
+              <img
+                src="Assets/images/portfolio-v1.png"
+                alt="portfolio-v1"
+                loading="lazy"
+                decoding="async"
+                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+              />
+            </div>
+            <div class="flex justify-between items-start">
+              <div>
+                <h3
+                  class="text-4xl font-black uppercase mb-2 group-hover:text-neo-blue transition-colors glitch-hover"
+                >
+                  Portfolio-v1
+                </h3>
+                <p class="font-mono text-sm mb-4 max-w-xs">
+                  Portfolio V2 – A modern, responsive personal portfolio built
+                  with clean UI, smooth animations, and performance-focused
+                  design.
+                </p>
+                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                  <span class="bg-neo-black text-white px-2 py-1">React</span>
+                  <span class="bg-neo-black text-white px-2 py-1">Nextjs</span>
+                </div>
+              </div>
+              <a
+                href="https://github.com/SUJAYkumar-dev74/portfolio-v1.git"
+                aria-label="View Portfolio-v1 repository on GitHub"
+                class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm"
+              >
+                <i class="ri-arrow-right-up-line text-2xl"></i>
+              </a>
+            </div>
+          </article>
+
+          <article
+            class="reveal group bg-white border-4 border-black p-4 shadow-hard"
+          >
+            <div
+              class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all"
+            >
+              <img
+                src="Assets/images/webkaizen.png"
+                alt="brand0-webkaizen"
+                loading="lazy"
+                decoding="async"
+                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+              />
+            </div>
+            <div class="flex justify-between items-start">
+              <div>
+                <h3
+                  class="text-4xl font-black uppercase mb-2 group-hover:text-neo-pink transition-colors glitch-hover"
+                >
+                  Webkaizen
+                </h3>
+                <p class="font-mono text-sm mb-4 max-w-xs">
+                  WebKaizen creates stunning custom websites for birthdays,
+                  weddings, love stories, proposals, and special occasions with
+                  modern designs, animations, and personalized experiences. DM
+                  to order.
+                </p>
+                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                  <span class="bg-neo-black text-white px-2 py-1">React</span>
+                  <span class="bg-neo-black text-white px-2 py-1">Nextjs</span>
+                  <span class="bg-neo-black text-white px-2 py-1"
+                    >database</span
+                  >
+                  <span class="bg-neo-black text-white px-2 py-1"
+                    >Fullstack</span
+                  >
+                </div>
+              </div>
+              <a
+                href="https://www.webkaizen.in"
+                aria-label="Visit WebKaizen website"
+                class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm"
+              >
+                <i class="ri-arrow-right-up-line text-2xl"></i>
+              </a>
+            </div>
+          </article>
+
+          <article
+            class="reveal group bg-white border-4 border-black p-4 shadow-hard mt-0 md:mt-20"
+          >
+            <div
+              class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all"
+            >
+              <img
+                src="Assets/images/onepiece.png"
+                alt="onepiece"
+                loading="lazy"
+                decoding="async"
+                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+              />
+            </div>
+            <div class="flex justify-between items-start">
+              <div>
+                <h3
+                  class="text-4xl font-black uppercase mb-2 group-hover:text-neo-orange transition-colors glitch-hover"
+                >
+                  One-Piece
+                </h3>
+                <p class="font-mono text-sm mb-4 max-w-xs">
+                  One-Piece project using htmlcssjs.
+                </p>
+                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                  <span class="bg-neo-black text-white px-2 py-1">HTML</span>
+                  <span class="bg-neo-black text-white px-2 py-1">CSS</span>
+                  <span class="bg-neo-black text-white px-2 py-1">JS</span>
+                  <span class="bg-neo-black text-white px-2 py-1"
+                    >FRONTEND</span
+                  >
+                </div>
+              </div>
+              <a
+                href="https://github.com/SUJAYkumar-dev74/One-Piece.git"
+                aria-label="View One-Piece repository on GitHub"
+                class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm"
+              >
+                <i class="ri-arrow-right-up-line text-2xl"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center mt-24">
+          <a
+            href="https://github.com/SUJAYkumar-dev74"
+            class="inline-block bg-neo-black text-white px-12 py-5 font-bold font-mono text-xl hover:bg-neo-white hover:text-black border-4 border-black transition-all shadow-hard hover:shadow-none cursor-hover"
+          >
+            VIEW ALL REPOS ON GITHUB
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-24 px-4 max-w-5xl mx-auto">
+      <div
+        class="bg-white border-4 border-black shadow-hard-xl p-8 md:p-12 relative reveal mt-12"
+      >
+        <div
+          class="absolute -top-10 -left-6 bg-neo-yellow border-4 border-black px-6 py-2 shadow-hard rotate-[-5deg]"
+        >
+          <span class="font-black text-2xl">START A PROJECT</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <h2 class="text-6xl font-black uppercase mb-6 leading-[0.85]">
+              Let's<br />Build<br />Together
+            </h2>
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-black"
+                >
+                  <i class="ri-mail-line text-xl"></i>
+                </div>
+                <a
+                  href="mailto:sSUJAY05873@gmail.com"
+                  class="text-xl font-bold hover:bg-neo-blue cursor-hover"
+                  >sSUJAY05873@gmail.com</a
+                >
+              </div>
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-black"
+                >
+                  <i class="ri-map-pin-line text-xl"></i>
+                </div>
+                <span class="text-xl font-bold">Remote / Earth</span>
+              </div>
+            </div>
+          </div>
+
+          <form
+            id="contact-form"
+            class="space-y-6 bg-gray-50 p-6 border-2 border-black"
+            onsubmit="
+              event.preventDefault();
+              this.innerHTML =
+                '<div class=\'py-20 text-center\'><i class=\'ri-checkbox-circle-fill text-6xl text-neo-green mb-4 block\'></i><h3 class=\'text-2xl font-black uppercase\'>Transmission Received</h3><p class=\'font-mono text-sm mt-2\'>System response initialized. I will reach out shortly.</p></div>';
+            "
+          >
+            <div class="flex flex-col">
+              <label class="font-mono font-bold mb-1 uppercase text-xs"
+                >Identity</label
+              >
+              <input
+                type="text"
+                placeholder="NAME / COMPANY"
+                class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover"
+              />
+            </div>
+            <div class="flex flex-col">
+              <label class="font-mono font-bold mb-1 uppercase text-xs"
+                >Coordinates</label
+              >
+              <input
+                type="email"
+                placeholder="EMAIL ADDRESS"
+                class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover"
+              />
+            </div>
+            <div class="flex flex-col">
+              <label class="font-mono font-bold mb-1 uppercase text-xs"
+                >Transmission</label
+              >
+              <textarea
+                rows="4"
+                placeholder="PROJECT DETAILS..."
+                class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all resize-none cursor-hover"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-neo-blue text-white font-black text-xl py-4 border-2 border-black shadow-hard neo-button hover:bg-neo-black hover:translate-y-1 hover:shadow-none transition-all cursor-hover"
+            >
+              TRANSMIT DATA
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-black text-white py-16 px-4 border-t-8 border-neo-green font-mono relative overflow-hidden"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10"
+      >
+        <div class="col-span-1 md:col-span-2">
+          <h2 class="text-4xl font-black mb-6">SUJAY.</h2>
+          <p class="text-gray-400 max-w-sm">
+            Hi, I'm SUJAY — a web developer creating premium templates and
+            fully responsive live websites for every special occasion.
+          </p>
+        </div>
+
+        <div>
+          <h3
+            class="font-bold text-neo-green mb-4 border-b border-gray-700 pb-2"
+          >
+            SITEMAP
+          </h3>
+          <ul class="space-y-2 text-gray-400">
+            <li>
+              <a
+                href="#"
+                class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover"
+                >Works</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3
+            class="font-bold text-neo-green mb-4 border-b border-gray-700 pb-2"
+          >
+            SOCIALS
+          </h3>
+          <div class="flex gap-4">
+            <a
+              href="https://www.instagram.com/webkaizen"
+              aria-label="Instagram"
+              class="text-2xl hover:text-neo-pink transition-colors cursor-hover"
+              ><i class="ri-instagram-fill"></i
+            ></a>
+            <a
+              href="https://github.com/SUJAYkumar-dev74"
+              aria-label="GitHub"
+              class="text-2xl hover:text-neo-yellow transition-colors cursor-hover"
+              ><i class="ri-github-fill"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/SUJAYsingh74/"
+              aria-label="LinkedIn"
+              class="text-2xl hover:text-neo-purple transition-colors cursor-hover"
+              ><i class="ri-linkedin-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@WebKaizenDev"
+              aria-label="YouTube"
+              class="text-2xl hover:text-neo-purple transition-colors cursor-hover"
+              ><i class="ri-youtube-fill"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="text-center mt-16 pt-8 border-t border-gray-800 text-gray-500 text-sm"
+      >
+        <p>© 2025 SUJAY</p>
+      </div>
+
+      <div
+        class="absolute bottom-0 left-0 w-full text-[20vw] font-black text-white opacity-[0.03] leading-none select-none pointer-events-none text-center"
+      >
+        WEBKAIZEN
+      </div>
+    </footer>
+    <script src="Assets/app.js"></script>
+  </body>
+</html>
