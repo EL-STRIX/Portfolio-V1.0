@@ -859,55 +859,133 @@
   <section id="contact" class="py-24 px-4 max-w-5xl mx-auto">
     <div class="bg-white border-4 border-black shadow-hard-xl p-8 md:p-12 relative reveal mt-12">
       <div class="absolute -top-10 -left-6 bg-neo-yellow border-4 border-black px-6 py-2 shadow-hard rotate-[-5deg]">
-        <span class="font-black text-2xl">START A PROJECT</span>
+        <span class="font-black text-2xl">LET'S BUILD</span>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
           <h2 class="text-6xl font-black uppercase mb-6 leading-[0.85]">
-            Let's<br />Build<br />Together
+            LET'S<br>
+            BUILD THE<br>
+            NEXT<span class="text-neo-red">_IDEA</span>
           </h2>
+
+          <p class="text-lg text-gray-600 max-w-md mb-8 leading-relaxed">
+            Looking for a Frontend Developer, Full-Stack Developer, or an intern?
+            I'm always excited to collaborate on modern web applications, innovative
+            products, and impactful digital experiences.
+          </p>
+
           <div class="space-y-4">
+
             <div class="flex items-center gap-4">
               <div class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-black">
                 <i class="ri-mail-line text-xl"></i>
               </div>
-              <a href="mailto:sSUJAY05873@gmail.com"
-                class="text-xl font-bold hover:bg-neo-blue cursor-hover">sSUJAY05873@gmail.com</a>
+
+              <a href="mailto:sujaypaul892@gmail.com"
+                class="text-xl font-bold hover:bg-neo-blue cursor-hover transition">
+                sujaypaul892@gmail.com
+              </a>
             </div>
+
             <div class="flex items-center gap-4">
               <div class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-black">
                 <i class="ri-map-pin-line text-xl"></i>
               </div>
-              <span class="text-xl font-bold">Remote / Earth</span>
+
+              <span class="text-xl font-bold">
+                West Bengal, India (Remote)
+              </span>
             </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-black">
+                <i class="ri-briefcase-line text-xl"></i>
+              </div>
+
+              <span class="text-xl font-bold">
+                Open to Internship & Freelance
+              </span>
+            </div>
+            <!-- 
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-black">
+                <i class="ri-github-line text-xl"></i>
+              </div>
+
+              <a href="https://github.com/EL-STRIX" target="_blank"
+                class="text-xl font-bold hover:bg-neo-blue cursor-hover transition">
+                github.com/EL-STRIX
+              </a>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-black">
+                <i class="ri-linkedin-box-line text-xl"></i>
+              </div>
+
+              <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank"
+                class="text-xl font-bold hover:bg-neo-blue cursor-hover transition">
+                LinkedIn Profile
+              </a>
+            </div> -->
+
           </div>
         </div>
 
         <form id="contact-form" class="space-y-6 bg-gray-50 p-6 border-2 border-black" onsubmit="
-              event.preventDefault();
-              this.innerHTML =
-                '<div class=\'py-20 text-center\'><i class=\'ri-checkbox-circle-fill text-6xl text-neo-green mb-4 block\'></i><h3 class=\'text-2xl font-black uppercase\'>Transmission Received</h3><p class=\'font-mono text-sm mt-2\'>System response initialized. I will reach out shortly.</p></div>';
-            ">
+    event.preventDefault();
+    this.innerHTML =
+    '<div class=\'py-20 text-center\'><i class=\'ri-checkbox-circle-fill text-6xl text-neo-green mb-4 block\'></i><h3 class=\'text-2xl font-black uppercase\'>Message Sent Successfully</h3><p class=\'font-mono text-sm mt-2\'>Thank you for reaching out. I\'ll get back to you within 24 hours.</p></div>';
+">
+
           <div class="flex flex-col">
-            <label class="font-mono font-bold mb-1 uppercase text-xs">Identity</label>
-            <input type="text" placeholder="NAME / COMPANY"
-              class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover" />
+            <label class="font-mono font-bold mb-1 uppercase text-xs">
+              Full Name
+            </label>
+
+            <input type="text" placeholder="Enter your full name" required
+              class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover">
           </div>
+
           <div class="flex flex-col">
-            <label class="font-mono font-bold mb-1 uppercase text-xs">Coordinates</label>
-            <input type="email" placeholder="EMAIL ADDRESS"
-              class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover" />
+            <label class="font-mono font-bold mb-1 uppercase text-xs">
+              Email Address
+            </label>
+
+            <input type="email" placeholder="your@email.com" required
+              class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover">
           </div>
+
           <div class="flex flex-col">
-            <label class="font-mono font-bold mb-1 uppercase text-xs">Transmission</label>
-            <textarea rows="4" placeholder="PROJECT DETAILS..."
+            <label class="font-mono font-bold mb-1 uppercase text-xs">
+              Project Type
+            </label>
+
+            <input type="text" placeholder="Portfolio, Business Website, Web App..."
+              class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover">
+          </div>
+
+          <div class="flex flex-col">
+            <label class="font-mono font-bold mb-1 uppercase text-xs">
+              Message
+            </label>
+
+            <textarea rows="5" placeholder="Tell me about your project..." required
               class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all resize-none cursor-hover"></textarea>
           </div>
+
           <button type="submit"
             class="w-full bg-neo-blue text-white font-black text-xl py-4 border-2 border-black shadow-hard neo-button hover:bg-neo-black hover:translate-y-1 hover:shadow-none transition-all cursor-hover">
-            TRANSMIT DATA
+
+            SEND MESSAGE
           </button>
+
+          <p class="text-center text-xs font-mono text-gray-500">
+            Usually responds within 24 hours.
+          </p>
+
         </form>
       </div>
     </div>
