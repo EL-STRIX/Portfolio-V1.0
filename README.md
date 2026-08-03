@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="https://sujay-portfolio-v2s.vercel.app/">
-    <img src="https://img.shields.io/badge/Live-sujay--portfolio--v2s.vercel.app-33FF57?style=flat-square&logo=vercel&logoColor=white" alt="Live Site" />
+  <a href="https://portfolio-v1-0-zeta-seven.vercel.app/">
+    <img src="https://img.shields.io/badge/Live-portfolio--v1--0--zeta--seven.vercel.app-33FF57?style=flat-square&logo=vercel&logoColor=white" alt="Live Site" />
   </a>
   <img src="https://img.shields.io/github/license/EL-STRIX/Portfolio-V1.0?style=flat-square&color=FBFF48" alt="MIT License" />
   <img src="https://img.shields.io/github/languages/count/EL-STRIX/Portfolio-V1.0?style=flat-square&color=FF70A6" alt="Languages" />
@@ -24,7 +24,7 @@ This is my personal portfolio — a single-page website that presents my work, s
 
 The design draws from brutalist and neo-brutalist aesthetics: bold typography, hard box shadows, high-contrast color palettes, and raw geometric shapes. Every animation, every interaction, and every layout decision was written by hand.
 
-**Live at:** [sujay-portfolio-v2s.vercel.app](https://sujay-portfolio-v2s.vercel.app/)
+**Live at:** [portfolio-v1-0-zeta-seven.vercel.app](https://portfolio-v1-0-zeta-seven.vercel.app/)
 
 ---
 
@@ -200,7 +200,7 @@ This project is licensed under the [MIT License](LICENSE).
 - GitHub: [@EL-STRIX](https://github.com/EL-STRIX)
 - LinkedIn: [Sujay Paul](https://www.linkedin.com/in/sujay-paul-684537374/)
 - Email: [sujaypaul892@gmail.com](mailto:sujaypaul892@gmail.com)
-- Portfolio: [sujay-portfolio-v2s.vercel.app](https://sujay-portfolio-v2s.vercel.app/)
+- Portfolio: [portfolio-v1-0-zeta-seven.vercel.app](https://portfolio-v1-0-zeta-seven.vercel.app/)
 
 ---
 
