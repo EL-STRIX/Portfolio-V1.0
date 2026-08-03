@@ -14,8 +14,6 @@
   </a>
   <img src="https://img.shields.io/github/license/EL-STRIX/Portfolio-V1.0?style=flat-square&color=FBFF48" alt="MIT License" />
   <img src="https://img.shields.io/github/languages/count/EL-STRIX/Portfolio-V1.0?style=flat-square&color=FF70A6" alt="Languages" />
-  <img src="https://img.shields.io/github/repo-size/EL-STRIX/Portfolio-V1.0?style=flat-square&color=3B82F6" alt="Repo Size" />
-  <img src="https://img.shields.io/github/last-commit/EL-STRIX/Portfolio-V1.0?style=flat-square&color=A855F7" alt="Last Commit" />
 </p>
 
 ---
