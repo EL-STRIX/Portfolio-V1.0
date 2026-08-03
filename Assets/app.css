@@ -342,11 +342,21 @@ html.is-loading {
   background: #fbff48;
 }
 
-.stack-line-input {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  flex-wrap: wrap;
+#stackInput {
+    flex: 1;
+    min-width: 10px;
+    margin-left: 4px;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: #fff;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1rem;
+    font-weight: 700;
+
+    caret-color: #33ff57;
 }
 
 .stack-line-output {
