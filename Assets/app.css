@@ -315,3 +315,103 @@ html.is-loading {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ===== Talk To My Stack — Interactive Terminal ===== */
+.stack-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: #33ff57;
+  animation: blink 0.6s infinite alternate;
+}
+
+#stackTerminalBody::-webkit-scrollbar {
+  width: 10px;
+}
+
+#stackTerminalBody::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+#stackTerminalBody::-webkit-scrollbar-thumb {
+  background: #33ff57;
+  border: 2px solid #000;
+}
+
+#stackTerminalBody::-webkit-scrollbar-thumb:hover {
+  background: #fbff48;
+}
+
+.stack-line-input {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.stack-line-output {
+  padding-left: 1.6rem;
+  color: rgba(255, 255, 255, 0.85);
+  border-left: 2px solid rgba(51, 255, 87, 0.25);
+}
+
+.stack-line-system {
+  padding-left: 1.6rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.stack-line-error {
+  padding-left: 1.6rem;
+  color: #ff2a2a;
+  border-left: 2px solid rgba(255, 42, 42, 0.4);
+}
+
+.stack-cmd-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  background: transparent;
+  border: 2px solid transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.15s ease;
+}
+
+.stack-cmd-btn:hover {
+  border-color: rgba(51, 255, 87, 0.4);
+  background: rgba(51, 255, 87, 0.08);
+  color: #ffffff;
+}
+
+.stack-cmd-btn:hover i {
+  color: #33ff57;
+}
+
+.stack-cmd-btn i:first-child {
+  opacity: 0.6;
+  font-size: 1rem;
+  transition: all 0.15s ease;
+}
+
+.stack-cmd-btn .stack-chevron {
+  margin-left: auto;
+  opacity: 0;
+  font-size: 0.9rem;
+  transform: translateX(-4px);
+  transition: all 0.15s ease;
+}
+
+.stack-cmd-btn:hover .stack-chevron {
+  opacity: 0.6;
+  color: #33ff57;
+  transform: translateX(0);
+}
