@@ -75,45 +75,6 @@ Built-in commands: `whoami`, `about`, `skills`, `experience`, `education`, `gith
 
 ---
 
-## Architecture
-
-This is a zero-dependency static site. No package manager, no bundler, no framework.
-
-```
-Browser Request
-    │
-    ├── index.html (982 lines)
-    │     ├── Tailwind CSS (CDN) with custom config
-    │     ├── Remix Icon (CDN)
-    │     ├── Google Fonts (CDN)
-    │     └── Google Tag Manager
-    │
-    ├── Assets/app.css (427 lines)
-    │     ├── Preloader animations (orbital rings, progress bar)
-    │     ├── Scroll reveal transitions
-    │     ├── Interactive terminal styles
-    │     ├── Custom cursor styles
-    │     ├── Glitch hover animation
-    │     ├── Marquee animation
-    │     └── Custom scrollbar
-    │
-    └── Assets/app.js (397 lines)
-          ├── Custom cursor tracking + hover state
-          ├── IntersectionObserver — scroll reveals
-          ├── IntersectionObserver — lazy image loading
-          ├── Scroll progress bar
-          ├── Preloader lifecycle (tick → finish → hero reveal)
-          └── Interactive terminal (IIFE)
-                ├── Command parser
-                ├── History (arrow key navigation)
-                ├── Command panel (click-to-run)
-                └── Output renderer
-```
-
-Everything loads from CDNs or local files. The entire site is a single HTML page with two supporting files.
-
----
-
 ## Technology Stack
 
 | Layer | Technology | Purpose |
@@ -223,34 +184,6 @@ Since there's no build step, development is straightforward: edit the files, ref
   <br />
   <em>Hero section with animated preloader and geometric elements</em>
 </p>
-
----
-
-## Roadmap
-
-Based on the current trajectory of the project:
-
-- [ ] Add a mobile hamburger menu (nav links are currently hidden on small screens)
-- [ ] Optimize images — convert PNGs to WebP and compress (profile photo is 1.9 MB)
-- [ ] Connect the contact form to a backend service (Formspree, EmailJS, or custom API)
-- [ ] Add a build step with Vite for production bundling and asset optimization
-- [ ] Add more projects as they're completed
-- [ ] Implement a dark mode toggle
-- [ ] Add page transition animations between sections
-
----
-
-## Contributing
-
-Contributions are welcome. If you find a bug, have a suggestion, or want to improve something:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m "Add: your feature description"`)
-4. Push to the branch (`git push origin feature/your-feature`)
-5. Open a Pull Request
-
-Please keep the brutalist design language consistent and avoid adding heavy dependencies.
 
 ---
 
