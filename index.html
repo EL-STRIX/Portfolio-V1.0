@@ -868,50 +868,106 @@
           </div>
         </div>
 
-        <form id="contact-form" class="space-y-6 bg-gray-50 p-6 border-2 border-black" onsubmit="
-    event.preventDefault();
-    this.innerHTML =
-    '<div class=\'py-20 text-center\'><i class=\'ri-checkbox-circle-fill text-6xl text-neo-green mb-4 block\'></i><h3 class=\'text-2xl font-black uppercase\'>Message Sent Successfully</h3><p class=\'font-mono text-sm mt-2\'>Thank you for reaching out. I\'ll get back to you within 24 hours.</p></div>';
-">
+        <!-- EmailJS SDK -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script>
+          (function () {
+            // ============================================================
+            // ⚠️  REPLACE THESE 3 VALUES WITH YOUR EMAILJS CREDENTIALS  ⚠️
+            // ============================================================
+            const EMAILJS_PUBLIC_KEY = '2e3KaEI3O2ey3mzQA';      // e.g. 'aBcDeFgHiJkLmNo'
+            const EMAILJS_SERVICE_ID = 'service_384iq2h';      // e.g. 'service_abc123'
+            const EMAILJS_TEMPLATE_ID = 'template_53zrixh';    // e.g. 'template_xyz789'
+            // ============================================================
+
+            emailjs.init(EMAILJS_PUBLIC_KEY);
+
+            document.addEventListener('DOMContentLoaded', function () {
+              const form = document.getElementById('contact-form');
+              const submitBtn = document.getElementById('contact-submit-btn');
+              const formStatus = document.getElementById('form-status');
+
+              form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Disable button & show loading state
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="ri-loader-4-line text-xl animate-spin inline-block mr-2"></i> SENDING...';
+
+                const templateParams = {
+                  from_name: form.from_name.value,
+                  from_email: form.from_email.value,
+                  project_type: form.project_type.value || 'Not specified',
+                  message: form.message.value,
+                };
+
+                emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+                  .then(function () {
+                    // Success — replace form with success message
+                    form.innerHTML =
+                      '<div class="py-20 text-center">' +
+                      '<i class="ri-checkbox-circle-fill text-6xl text-neo-green mb-4 block"></i>' +
+                      '<h3 class="text-2xl font-black uppercase">Message Delivered!</h3>' +
+                      '<p class="font-mono text-sm mt-2">Thank you for reaching out. I\'ll get back to you within 24 hours.</p>' +
+                      '</div>';
+                  })
+                  .catch(function (error) {
+                    // Error — show error message and re-enable button
+                    console.error('EmailJS Error:', error);
+                    formStatus.classList.remove('hidden');
+                    formStatus.innerHTML =
+                      '<i class="ri-error-warning-line mr-1"></i> Failed to send. Please try again or email me directly.';
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'SEND MESSAGE';
+                  });
+              });
+            });
+          })();
+        </script>
+
+        <form id="contact-form" class="space-y-6 bg-gray-50 p-6 border-2 border-black">
 
           <div class="flex flex-col">
-            <label class="font-mono font-bold mb-1 uppercase text-xs">
+            <label for="contact-name" class="font-mono font-bold mb-1 uppercase text-xs">
               Full Name
             </label>
 
-            <input type="text" placeholder="Enter your full name" required
+            <input id="contact-name" name="from_name" type="text" placeholder="Enter your full name" required
               class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover">
           </div>
 
           <div class="flex flex-col">
-            <label class="font-mono font-bold mb-1 uppercase text-xs">
+            <label for="contact-email" class="font-mono font-bold mb-1 uppercase text-xs">
               Email Address
             </label>
 
-            <input type="email" placeholder="your@email.com" required
+            <input id="contact-email" name="from_email" type="email" placeholder="your@email.com" required
               class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover">
           </div>
 
           <div class="flex flex-col">
-            <label class="font-mono font-bold mb-1 uppercase text-xs">
+            <label for="contact-project" class="font-mono font-bold mb-1 uppercase text-xs">
               Project Type
             </label>
 
-            <input type="text" placeholder="Portfolio, Business Website, Web App..."
+            <input id="contact-project" name="project_type" type="text" placeholder="Portfolio, Business Website, Web App..."
               class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all cursor-hover">
           </div>
 
           <div class="flex flex-col">
-            <label class="font-mono font-bold mb-1 uppercase text-xs">
+            <label for="contact-message" class="font-mono font-bold mb-1 uppercase text-xs">
               Message
             </label>
 
-            <textarea rows="5" placeholder="Tell me about your project..." required
+            <textarea id="contact-message" name="message" rows="5" placeholder="Tell me about your project..." required
               class="bg-white border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:shadow-hard-sm transition-all resize-none cursor-hover"></textarea>
           </div>
 
-          <button type="submit"
-            class="w-full bg-neo-blue text-white font-black text-xl py-4 border-2 border-black shadow-hard neo-button hover:bg-neo-black hover:translate-y-1 hover:shadow-none transition-all cursor-hover">
+          <!-- Error message (hidden by default) -->
+          <div id="form-status" class="hidden text-center text-sm font-mono font-bold text-neo-red bg-red-50 border-2 border-neo-red p-3"></div>
+
+          <button id="contact-submit-btn" type="submit"
+            class="w-full bg-neo-blue text-white font-black text-xl py-4 border-2 border-black shadow-hard neo-button hover:bg-neo-black hover:translate-y-1 hover:shadow-none transition-all cursor-hover disabled:opacity-60 disabled:cursor-not-allowed">
 
             SEND MESSAGE
           </button>
