@@ -153,12 +153,25 @@ Right-click `index.html` → "Open with Live Server"
 
 ### Configuration
 
-No environment variables or configuration files are required. The site is fully self-contained.
+No environment variables or `.env` files are required. The site is fully self-contained and runs entirely in the browser.
 
+#### Analytics (Google Tag Manager)
 To update your GTM container ID, edit line 32 in `index.html`:
 ```js
 "GTM-TLNG322R"  // Replace with your GTM ID
 ```
+
+#### Contact Form (EmailJS)
+The contact form uses [EmailJS](https://www.emailjs.com/) to send emails directly from the client side without needing a backend server. 
+
+Because EmailJS runs in the browser, the Public Key, Service ID, and Template ID are intentionally hardcoded in `index.html` (around line 875). **This is safe and expected by design.** 
+
+However, to protect your monthly email quota from being abused by others:
+1. Log into your EmailJS dashboard.
+2. Go to **Account** > **Security**.
+3. Under **Allowed Origin (Domains)**, enter your website's domain (e.g., `portfolio-v1-0-zeta-seven.vercel.app`) and `localhost`.
+
+This ensures that even if someone copies your keys, EmailJS will reject their requests unless they originate from your actual website.
 
 ---
 
